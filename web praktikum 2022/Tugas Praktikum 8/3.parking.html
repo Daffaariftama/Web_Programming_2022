@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bayar parkir</title>
+    <style>
+       *{
+           box-sizing: border-box;
+           margin: 5px;
+           font-family: arial;
+           text-decoration: none;
+           text-transform: uppercase;
+       }
+       .container {
+           width: max-content;
+           margin: 30px auto;
+    
+       }
+       table{
+           text-align: center;
+       }
+       .tab{
+           width: 100px;
+       }
+       h1{
+           text-align: center;
+           margin-bottom: 20px;
+       }
+       
+       button {
+           border-radius: 5px;
+           background-color: aqua;
+           color: aliceblue;
+           border: 0;
+           width: 100px;
+           height: 20px;
+           font-size: 15px;
+           
+       }
+       a:hover{color: white;}
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>parking</h1>
+    <table border="1">
+        <tr>
+            <td>masuk</td>
+            <td>keluar</td>
+            <td class="tab">lama</td>
+            <td class="tab">biaya</td>
+        </tr>
+        <tr>
+            <td><input type="text"  id="masuk"></td>
+            <td><input type="text" id="keluar"></td>
+            <td  id= "lama"></td>
+            <td id="bayar"></td>
+        </tr>
+            
+        
+    </table>
+    <button id="hitung"><a href="#">hitung</a> </button></td>
+</div>
+
+
+    <script >
+        let bayar = document.querySelector('#bayar');
+let hitung = document.querySelector('#hitung');
+let lama = document.querySelector('#lama');
+
+hitung.addEventListener('mouseleave', function () {
+  hitung.style.backgroundColor = 'aqua';
+});
+hitung.addEventListener('mouseenter', function () {
+  hitung.style.backgroundColor = 'lightblue';
+});
+
+hitung.addEventListener('click', function () {
+  const masuk = parseFloat(document.querySelector('#masuk').value);
+  const keluar = parseFloat(document.querySelector('#keluar').value);
+
+  var jam;
+  if (masuk > keluar) {
+    jam = masuk - keluar;
+  } else {
+    jam = keluar - masuk;
+  }
+
+  var harga;
+  if (jam > 2) {
+    harga = (jam - 2) * 1000 + 3000;
+  } else {
+    harga = 3000;
+  }
+  
+  lama.innerHTML = jam + ' jam';
+  bayar.innerHTML = 'Rp ' + harga;
+});
+
+    </script>
+</body>
+</html>

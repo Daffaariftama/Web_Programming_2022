@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>monyet</title>
+    <style>
+      .container {
+        text-align: center;
+        margin: 30px auto;
+        padding: 20px;
+        width: auto;
+      }
+      .pilihan {
+        margin-bottom: 20px;
+      }
+      button {
+        border: none;
+        padding: 4px;
+        border-radius: 5px;
+      }
+      button:hover,
+      #pilih:hover {
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="pilihan">
+        <label for="pilih">Pilih hewan</label>
+        <select id="pilih">
+          <option class="hiu" value="hiu">hiu</option>
+          <option class="monyet" value="monyet">monyet</option>
+          <option class="macan" value="macan">macan</option>
+          <option class="singa" value="singa">singa</option>
+          <option class="lumba" value="lumba">lumba</option>
+        </select>
+        <button id="klik">Lihat</button>
+      </div>
+      <div class="image">
+        <img src="img/hiu.jpg" class="gambar" width="400px" height="400px" />
+      </div>
+    </div>
+
+    <script>
+      const klik = document.querySelector('#klik');
+      klik.addEventListener('click', function () {
+        let gambar = document.querySelector('.gambar');
+        const pilih = document.querySelector('#pilih').value;
+        if (pilih == 'hiu') {
+          gambar.setAttribute('src', 'img/' + pilih + '.jpg');
+          alert('Anda memilih ' + pilih + '\nklik OK untuk melihat gambar!');
+        } else if (pilih == 'monyet') {
+          gambar.setAttribute('src', 'img/' + pilih + '.jpg');
+          alert('Anda memilih ' + pilih + '\nklik OK untuk melihat gambar!');
+        } else if (pilih == 'macan') {
+          gambar.setAttribute('src', 'img/' + pilih + '.jpg');
+          alert('Anda memilih ' + pilih + '\nklik OK untuk melihat gambar!');
+        } else if (pilih == 'singa') {
+          gambar.setAttribute('src', 'img/' + pilih + '.jpg');
+          alert('Anda memilih ' + pilih + '\nklik OK untuk melihat gambar!');
+        } else {
+          gambar.setAttribute('src', 'img/' + pilih + '.jpg');
+          alert('Anda memilih ' + pilih + '\nklik OK untuk melihat gambar!');
+        }
+      });
+    </script>
+  </body>
+</html>

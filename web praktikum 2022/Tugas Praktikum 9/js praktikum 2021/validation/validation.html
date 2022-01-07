@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        font-family: arial;
+        text-transform: capitalize;
+      }
+      body{
+        background-color: #eee;
+      
+      }
+      form{
+        width: 220px;
+        margin: 40px auto;
+        padding: 10px;
+        border-radius: 10px;
+        border: 5px solid white;
+      }
+      p{
+        margin-top: 15px;
+      }
+      input{
+        margin-top: 5px;
+      }
+      button{
+        color: salmon;
+        border-radius: 5px;
+        width: 70px;
+        height: 25px;
+        border: none;
+        background-color: white;
+      }
+      button:hover{
+        background-color: lightcyan;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <p>nama pelanggan</p>
+      <input size="23" type="text" id="nama" />
+      <p>email</p>
+      <input size="23" type="email" id="email" />
+      <p>jam keberangkatan</p>
+      <input size="23" type="time" id="jam" />
+      <p>tujuan keberangkatan</p>
+      <input size="23" type="text" id="tujuan" />
+      <p>jumlah</p>
+      <input  type="number" id="jumlah" /><br /><br />
+      <button id="button">validasi</button>
+    </form>
+
+    <script>
+      const button = document.querySelector('#button');
+
+      button.addEventListener('click', function () {
+        let nama = document.querySelector('#nama').value;
+        let email = document.querySelector('#email').value;
+        let jam = document.querySelector('#jam').value;
+        let tujuan = document.querySelector('#tujuan').value;
+        let jumlah = document.querySelector('#jumlah').value;
+
+       
+
+        document.body.innerHTML = 'Nama : ' + nama + '</br>' + 'email : ' + email + '</br>' + 'Jam Keberangkatan : ' + jam + '</br>' + 'Tujuan : ' + tujuan + '</br>' + 'Jumlah tiket : ' + jumlah;
+      
+      });
+    </script>
+    
+  </body>
+</html>

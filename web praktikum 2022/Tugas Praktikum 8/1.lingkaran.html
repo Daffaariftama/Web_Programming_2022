@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BANGUN DATAR : Lingkaran</title>
+	<style>
+		div	{
+	margin: auto ;
+	width: 400px;
+	margin-top: 100px;
+}
+table {
+	border-style: none;
+	border-collapse: collapse;
+	width: 100%;
+}
+th{
+	background-color: #f44336;
+	padding: 5px;
+	border: none;
+	font-size: 16px;
+}
+td{
+	border: none;
+}
+input[type=text]{
+	padding: 10px;
+	width: 380px;
+	border-style: solid;
+	border-color: #6d6e6a;
+	font-size: 16px;
+}
+input[type=text]:disabled{
+	background-color: white;
+}
+button {
+	width: 100%;
+	height: 40px;
+	background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+	</style>
+</head>
+<body>
+<div>
+	<table>
+		<thead>
+			<tr>
+				<th>Lingkaran</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Masukan nilai jari - jari</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="ipt_r"></td>
+			</tr>
+			<tr>
+				<td><button onclick="hitung()">Hitung</button></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>Luas lingkaran</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="opt_luas" disabled></td>
+			</tr>
+			<tr>
+				<td>Keliling lingkarang</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="opt_keliling" disabled></td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
+<script >
+	const phi = 3.14;
+var luas;
+var keliling;
+var r;
+var d;
+function hitung() {
+	r = parseFloat(document.getElementById("ipt_r").value);
+	luas = phi * Math.pow(r,2);
+	d = 2 * r;
+	keliling = phi * d;
+	document.getElementById('opt_luas').value = luas;
+	document.getElementById('opt_keliling').value = keliling;
+}
+</script>
+</body>
+</html>

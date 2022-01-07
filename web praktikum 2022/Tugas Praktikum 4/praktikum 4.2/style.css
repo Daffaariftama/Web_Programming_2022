@@ -1,0 +1,42 @@
+.table1{
+    width:100% ;
+    vertical-align: text-top;
+  }
+  .table2 .td1 {
+    width: 300px;
+    padding-top: 30px;
+  }
+  .table2.td2{
+    vertical-align: top;
+    padding-left: 50px;
+  }
+  .atas , p{
+    font-style: arial;
+    font-size: 25px;
+  }
+  .td3{
+    vertical-align: top;
+  }
+   .categori1{
+    font-style: italic;
+    font-size: 25px;
+  }
+  .p2{
+    font-style: arial; 
+    font-size: 22px
+  }
+  .table3{
+    width: 100%
+  }
+  video{
+    width:"500px" ;
+    height:"340px"
+  }
+  .fieldset1{
+    width: 500px;
+    height: 340px
+  }
+  .li2{
+    margin: 10px; 
+    font-size: 25px;
+  }

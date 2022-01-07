@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bayar parkir</title>
+    <style>
+       *{
+           box-sizing: border-box;
+           margin: 5px;
+           font-family: arial;
+           text-decoration: none;
+           text-transform: uppercase;
+       }
+       .container {
+           width: max-content;
+           margin: 30px auto;
+    
+       }
+       table{
+           text-align: center;
+       }
+       .tab{
+           width: 100px;
+       }
+       h1{
+           text-align: center;
+           margin-bottom: 20px;
+       }
+       
+       button {
+           border-radius: 5px;
+           background-color: aqua;
+           color: aliceblue;
+           border: 0;
+           width: 100px;
+           height: 20px;
+           font-size: 15px;
+           
+       }
+       a:hover{color: white;}
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>USB to IDR</h1>
+    <table border="1">
+
+        <tr>
+            <td>usd</td>
+            <td class="tab">idr</td>
+        </tr>
+        <tr>
+            <td><input type="text"  id="USD"></td>
+            <td id="IDR"></td>
+        </tr> 
+
+    </table>
+    <button id="hitung"><a href="#">hitung</a> </button></td>
+</div>
+
+
+    <script >
+        
+        let hitung = document.querySelector('#hitung');
+
+
+        hitung.addEventListener('click', function () {
+            let IDR = document.querySelector('#IDR');
+            const USD = parseFloat(document.querySelector('#USD').value);
+        
+        IDR.innerHTML = 'Rp ' + USD*14000
+});
+
+    </script>
+</body>
+</html>
